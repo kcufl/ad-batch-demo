@@ -30,7 +30,7 @@ with DAG(
             'SPRING_PROFILES_ACTIVE': 'k8s',
             'TARGET_DATE': '{{ ds }}',
         },
-        on_finish_action='delete_succeeded_pod',
+        on_finish_action='keep_pod',
         get_logs=True,
         startup_timeout_seconds=600,
         container_resources={
