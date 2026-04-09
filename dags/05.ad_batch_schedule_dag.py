@@ -22,7 +22,7 @@ with DAG(
 
     run_batch_job = KubernetesPodOperator(
         task_id='run_daily_ad_stats',
-        name='daily-ad-stats-batch',
+        name='daily_ad_stats_schedule_batch',
         namespace='ad-batch',
         image='kyong0409/ad-batch-demo:latest',
         image_pull_policy='Always',
